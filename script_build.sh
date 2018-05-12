@@ -55,17 +55,17 @@ wait
 echo -e ${cya}"OUT dir from your repo deleted"${txtrst};
 fi
 
+#For Legacy server
+export days_to_log=7
+export WITH_ROOT_METHOD="rootless"
+export RR_BUILDTYPE=Official
+
 # To add HostName
 export KBUILD_BUILD_USER="SubinsMani"
 export KBUILD_BUILD_HOST="TheBoss"
-
-# For Official Build
-export CUSTOM_BUILD_TYPE=OFFICIAL
-
-#To enable DEXPREOPT
 export WITH_DEXPREOPT=true
 
 # Build ROM
 . build/envsetup.sh
-lunch aosp_osprey-userdebug
+lunch rr_osprey-userdebug
 mka bacon -j8
