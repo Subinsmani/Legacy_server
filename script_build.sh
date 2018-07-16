@@ -65,4 +65,4 @@ export DEVICE_MAINTAINERS="Subins Mani"
 # Build ROM
 . build/envsetup.sh
 lunch bootleg_osprey-userdebug
-mka bacon -j8
+mka bootleg -j8
