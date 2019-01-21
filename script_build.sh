@@ -50,7 +50,7 @@ fi
 # Its Clean Time
 if [ "$make_clean" = "yes" ];
 then
-rm -rf out/target/product/osprey
+rm -rf out/target/product/*
 wait
 echo -e ${cya}"OUT dir from your repo deleted"${txtrst};
 fi
@@ -67,5 +67,5 @@ export WITH_DEXPREOPT=true
 
 # Build ROM
 . build/envsetup.sh
-lunch aosp_osprey-userdebug
+lunch aosp_X00TD-userdebug
 mka bacon -j8
