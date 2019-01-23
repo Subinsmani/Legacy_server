@@ -50,14 +50,13 @@ fi
 # Its Clean Time
 if [ "$make_clean" = "yes" ];
 then
-rm -rf out/target/product/osprey
+rm -rf out/target/product/*
 wait
 echo -e ${cya}"OUT dir from your repo deleted"${txtrst};
 fi
 
 #For Legacy server
 export days_to_log=7
-export WITH_ROOT_METHOD="rootless"
 export RR_BUILDTYPE=Official
 
 # To add HostName
@@ -67,5 +66,5 @@ export WITH_DEXPREOPT=true
 
 # Build ROM
 . build/envsetup.sh
-lunch rr_osprey-userdebug
+lunch rr_X00TD-userdebug
 mka bacon -j8
