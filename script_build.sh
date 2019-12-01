@@ -63,11 +63,11 @@ export KBUILD_BUILD_HOST="TheBoss"
 export PIXYS_BUILD_TYPE=OFFICIAL
 export DEVICE_MAINTAINERS="Subins Mani"
 export TEMPORARY_DISABLE_PATH_RESTRICTIONS=true
-export BUILD_WITH_GAPPS=true
+#export BUILD_WITH_GAPPS=true
 
 # Build ROM
 . build/envsetup.sh
-lunch pixys_X00TD-userdebug
+lunch pixys_X00T-userdebug
 mka pixys -j24
 
 gdrive upload out/target/product/X00TD/P*.zip
