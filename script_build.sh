@@ -67,7 +67,7 @@ export BUILD_WITH_GAPPS=true
 
 # Build ROM
 . build/envsetup.sh
-lunch pixys_X00TD-userdebug
+lunch pixys_${device}-userdebug
 mka pixys -j24
 
-gdrive upload out/target/product/X00TD/P*.zip
+gdrive upload out/target/product/${device}/P*.zip
